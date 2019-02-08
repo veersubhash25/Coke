@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -8,7 +8,7 @@ using Web.Models;
 
 namespace Web.Controllers
 {
-    public class HomeController : Controller
+    public class CokeController : Controller
     {
         public IActionResult Index()
         {
@@ -19,20 +19,16 @@ namespace Web.Controllers
         {
             return View();
         }
-        public IActionResult About()
+        public IActionResult Frooty()
         {
-            return Content("Hello Friends This is Subhash");
+            return View();
+
         }
-        public IActionResult ReturnJson()
+        public IActionResult Maaza()
         {
-            return Json(new { name = "subhash", age = "22" });
+            return View();
         }
-        public IActionResult ReturnHtml()
-        {
-            var index = "<!DOCTYPE HTML><html><head><title>Subhash Veeramachaneni</title></head><body>Welcome to c# app </body></html>";
-            return Content(index,"text/html");
-                
-        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
